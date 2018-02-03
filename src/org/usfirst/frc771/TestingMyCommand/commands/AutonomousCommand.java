@@ -52,12 +52,15 @@ public class AutonomousCommand extends Command {
     	if (Schmoo == 2){
     		setTimeout(3.8);
     	}*/
+    	
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
     	vision.getScaledTargetXpos();
+    	vision.above20();
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()

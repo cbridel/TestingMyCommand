@@ -71,7 +71,7 @@ public class RobotMap {
         
         driveDifferentialDrive1 = new DifferentialDrive(driveSpeedControllerGroup1, driveSpeedControllerGroup2);
 //        LiveWindow.addActuator("Drive", "Differential Drive 1", driveDifferentialDrive1);
-        driveDifferentialDrive1.setSafetyEnabled(true);
+        driveDifferentialDrive1.setSafetyEnabled(false);
         driveDifferentialDrive1.setExpiration(0.1);
         driveDifferentialDrive1.setMaxOutput(1.0);
 
