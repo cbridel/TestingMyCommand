@@ -59,7 +59,7 @@ public class AutonomousCommand extends Command {
     @Override
     protected void execute() {
     	vision.getScaledTargetXpos();
-    	vision.above20();
+    	//vision.above20();
     	
     }
 

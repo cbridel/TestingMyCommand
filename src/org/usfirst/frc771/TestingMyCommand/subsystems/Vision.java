@@ -72,7 +72,7 @@ public class Vision extends Subsystem {
 	public	double	getScaledTargetXpos()	{
 		double raw = getRawTargetXpos();
 		double	scaled	=	(raw-xRes/2)/(xRes/2);
-		//System.out.println("HEY CHECK IT OUT " + scaled);
+		System.out.println("HEY CHECK IT OUT " + scaled);
 		 return	scaled;
 	} 
 	

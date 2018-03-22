@@ -1,23 +1,22 @@
 package org.usfirst.frc771.TestingMyCommand.commands;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.command.Command;
-
 import org.usfirst.frc771.TestingMyCommand.Robot;
 
-public class TestDrive extends Command{
-public TestDrive(){
+
+public class ZGyroKill extends Command{
+	
+	public ZGyroKill(){
 		
 		requires(Robot.drive);
 		
 	}
 	
 	protected void initialize(){
-		
-		setTimeout(5);
+		Robot.drive.killGyro();
+		setTimeout(1);
 	}
 	
 	protected void execute(){
-		Robot.drive.testDrive();
 		
 	}
 	
@@ -32,4 +31,5 @@ public TestDrive(){
 	protected void interrupted(){
 		
 	}
+
 }

@@ -44,6 +44,7 @@ public class DriveCommand extends Command {
     @Override
     protected void execute() {
     	Robot.drive.DifferentialDrive(0.7, 0.7);
+//    	Robot.drive.getUltra();
     }
 
     // Make this return true when this Command no longer needs to run execute()

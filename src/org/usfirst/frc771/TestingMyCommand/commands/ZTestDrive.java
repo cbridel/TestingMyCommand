@@ -1,15 +1,11 @@
 package org.usfirst.frc771.TestingMyCommand.commands;
-import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.command.Command;
 
 import org.usfirst.frc771.TestingMyCommand.Robot;
 
-public class GyroDrive extends Command{
-	
-	boolean finished;
-	
-	public GyroDrive(){
+public class ZTestDrive extends Command{
+public ZTestDrive(){
 		
 		requires(Robot.drive);
 		
@@ -17,18 +13,16 @@ public class GyroDrive extends Command{
 	
 	protected void initialize(){
 		
-		Robot.drive.resetGyro();
-		
+		setTimeout(5);
 	}
 	
 	protected void execute(){
-		double Angle_error = Robot.drive.findGyroAngle();
-		double Angle_rate = Robot.drive.findGyroRate();
-		Robot.drive.gyroDriveWithSpeed(-0.2, -Angle_error, Angle_rate);
+		Robot.drive.testDrive();
+		
 	}
 	
 	protected boolean isFinished(){
-		return finished = false;
+		return isTimedOut();
 	}
 	
 	protected void end(){
@@ -38,5 +32,4 @@ public class GyroDrive extends Command{
 	protected void interrupted(){
 		
 	}
-
 }
